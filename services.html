@@ -1,3 +1,6 @@
+<?php
+	include 'inc/define.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,7 +48,18 @@
                             </li>
 							<li class="nav-item"><a class="nav-link" href=""></a></li>
 							<li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">로그인</a>
+                                <?php
+							if($status_login){
+							?>							
+								<a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">로그아웃</a>  
+							<?php
+							}
+							else{
+							?>							
+								<a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Log In</a>                           
+							<?php
+							}
+							?>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                                     <li><a class="dropdown-item" href="portfolio-overview.html">나의 계정</a></li>
                                     <li><a class="dropdown-item" href="portfolio-item.html">나의 프로젝트</a></li>
@@ -108,7 +122,9 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.html">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=1">시작하기</a>
+									
+									</div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +172,7 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.html">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=2">시작하기</a></div>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +220,7 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.html">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=3">시작하기</a></div>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +277,7 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="#!">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=4">시작하기</a></div>
                                 </div>
                             </div>
                         </div>
@@ -309,7 +325,7 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.html">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=5">시작하기</a></div>
                                 </div>
                             </div>
                         </div>
@@ -357,7 +373,7 @@
                                         </li>
 										<br>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.html">시작하기</a></div>
+                                    <div class="d-grid"><a class="btn btn-success" href="projects/request.php?category=6">시작하기</a></div>
                                 </div>
                             </div>
                         </div>
