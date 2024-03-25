@@ -1,0 +1,23 @@
+/* CSS Document */
+
+.index_body {
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-color:white;	
+}
+
+.Home {
+	background-size: cover;
+  	background-color: #f3d25d;
+}
+.logo_div{
+	position: relative;
+}
+.Rectangle-1 {
+	border-width: 10%;
+	border-color: black;
+	border-style: solid;
+	width: 100px;
+	height: 100px;
+}

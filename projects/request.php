@@ -1,0 +1,202 @@
+<?php
+	include '../inc/define.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Labsemble - 당신의 멋진 꿈을 만들어 드리겠습니다.</title>
+                
+        <!-- Bootstrap icons-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+		
+		<!-- Favicon-->
+		<link rel="icon" href="../images/favicon-01.png"/>
+		<link rel="apple-touch-icon" href="../images/favicon-01.png"/>
+		
+    </head>
+    <body class="d-flex flex-column h-100">
+		<?php
+		$text=$_GET["category"];
+		echo "category ".$text;
+		?>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index.php">Labsemble</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../services.php">프로젝트 문의</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="../faq.html">FAQ</a></li>
+                            <!--<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">포트폴리오</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="portfolio-overview.html">전체 포트폴리오</a></li>
+                                    <li><a class="dropdown-item" href="portfolio-item.html">개별 포트톨리오</a></li>
+                                </ul>
+                            </li>
+							<li class="nav-item"><a class="nav-link" href=""></a></li>
+							<li class="nav-item dropdown">
+                                <?php
+							if($status_login){
+							?>
+								<a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">로그아웃</a>
+							<?php
+							}
+							else{
+							?>
+								<a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Log In</a>
+							<?php
+							}
+							?>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="portfolio-overview.html">나의 계정</a></li>
+                                    <li><a class="dropdown-item" href="portfolio-item.html">나의 프로젝트</a></li>
+									<li><a class="dropdown-item" href="portfolio-item.html">로그아웃</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Features section-->
+            <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-12 mb-5">
+                        <div class="col-lg-12 mb-0 mb-lg-0"><h2 class="fw-bolder mb-0">Labsemble 만의 특별한 <br>프로젝트 등록/관리 서비스</h2></div>
+						<div class="col-lg-12 mb-0 mb-lg-1"><h2 class="h5 fw-bolder mb-0">프로젝트 등록부터 Labsemble이 당신의 PM이 되어 드립니다.</h2></div>
+						<div class="col-lg-12 mb-0 mb-lg-1"><h2 class="h5 mb-0">Labsemble은 당신의 성공적인 프로젝트 완성을 위해</h2></div>
+						<div class="col-lg-12 mb-0 mb-lg-1"><h2 class="h5 mb-0">프로젝트등록/관리/검사의 3단계 관리 시스템을 제공합니다.</h2></div>
+                        
+						
+                    </div>
+					<!-- input Form ConamyName-->
+					<div class="row gx-12 mb-2">                        
+						<label for="companyName" class="h5 fw-bold form-label">1. 업체명</label>
+						<input type="text" class="form-control" id="companyName" aria-describedby="companyNameHelp">
+						<div id="companyNameHelp" class="form-text">개인 또는 학생인경우 이름을 적어주세요.</div>
+                    </div>
+					
+					<!-- input Form manager Name-->
+					<div class="row gx-12 mb-4">                        
+						<label for="managerName" class="h5 fw-bold form-label">2. 담당자명</label>
+						<input type="text" class="form-control" id="managerName" aria-describedby="managerNameHelp">
+						<div id="managerNameHelp" class="form-text">본인이 아닌 경우 담당자 이름을 적어주세요. 기본적으로 계정에 연계된 담당자 이름이 입력됩니다.</div>
+                    </div>
+					
+					
+					<!-- input Form projectName-->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectName" class="h5 fw-bold form-label">3. 프로젝트 명</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">당신의 멋진 아이디어에 대한 이름을 알려주세요.</div>
+                    </div>
+					
+					<!-- input Form project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">4. 프로젝트 내용</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">당신의 멋진 아이디어에 대한 이름을 알려주세요.</div>
+                    </div>
+					<!-- detail -->
+					<?php
+					if($text=="1"){
+					?>
+					<!-- 1. Development Project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">제품에 대한 기능 요구사항.</div>
+                    </div>
+					<?php
+					}else if($text=="2"){
+					?>
+					<!-- 2. Manufacture Project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">생산거버파일.</div>
+                    </div>
+					<?php
+					}else if($text=="3"){
+					?>
+					<!-- 3. Component Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">부품규격서 및 발주 리스트.</div>
+                    </div>
+					<?php
+					}else if($text=="4"){
+					?>
+					<!-- 4. Enclosure Project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">기구설계에 대한 자료.</div>
+                    </div>
+					<?php
+					}else if($text=="5"){
+					?>
+					<!-- 5. Accessary Project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">부품제작에 대 요구사항.</div>
+                    </div>
+					<?php
+					}else if($text=="6"){
+					?>
+					<!-- 6. Cetification Project Requirement -->
+					<div class="row gx-12 mb-4">                        
+						<label for="projectCategory" class="h5 fw-bold form-label">5. 프로젝트 추가자료</label>
+						<input type="text" class="form-control" id="projectName" aria-describedby="projectname">
+						<div id="projectname" class="form-text">인증에 대한 요구사항.</div>
+                    </div>
+					<?php
+					}
+					?>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Labsemble 2023</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
